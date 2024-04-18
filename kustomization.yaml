@@ -1,0 +1,22 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: github-runner
+
+helmCharts:
+- releaseName: ghrc
+  name: gha-runner-scale-set-controller
+  # name: ""
+  # repo: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
+  repo: ghcr.io/actions/actions-runner-controller-charts
+  version: 0.9.0
+  includeCRDs: true
+- # releaseName: ghrc-scale-set
+  # releaseName sets the runner label
+  releaseName: kubernetes-self-hosted
+  name: gha-runner-scale-set
+  # name: ""
+  # repo: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+  repo: ghcr.io/actions/actions-runner-controller-charts
+  version: 0.9.0
+  valuesFile: ghrc-scale-set.values.yaml
