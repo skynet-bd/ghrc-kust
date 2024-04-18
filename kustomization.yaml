@@ -8,7 +8,7 @@ helmCharts:
   name: gha-runner-scale-set-controller
   # name: ""
   # repo: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
-  repo: ghcr.io/actions/actions-runner-controller-charts
+  repo: oci://ghcr.io/actions/actions-runner-controller-charts
   version: 0.9.0
   includeCRDs: true
 - # releaseName: ghrc-scale-set
@@ -17,6 +17,6 @@ helmCharts:
   name: gha-runner-scale-set
   # name: ""
   # repo: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
-  repo: ghcr.io/actions/actions-runner-controller-charts
+  repo: oci://ghcr.io/actions/actions-runner-controller-charts
   version: 0.9.0
   valuesFile: ghrc-scale-set.values.yaml
